@@ -1,23 +1,36 @@
 
-# DLIT_WC
-Deep Learning model training visualized using mutual information.
+# Deep Learning/Information Theory visualization using Web Components
 
-Since Deep Learning is basically a mapping function between input and ouput, in this project we're interested in visualizing the training process, where the model slowly finds the correct mapping parameters, until reaching the maximal bound.
+- How much data is 'enough' for a Machine Learning Model (For example, Deep Learning) in order to achieve good generalized resulsts - good percision/F1-Statistic score?
+- How to overcome the bias/variance problem (overfitting)?
 
-Unlike other visualizations, where the layers where visualized directly or using dimension reduction techniques (http://colah.github.io/posts/2014-10-Visualizing-MNIST/), here we're interested more on the general information that the nodes contain.
+This work is based on previous work and theories by Prof. Geoff I Webb (Monash University) and Prof. Naftali Tishby (Hebrew University).
 
-According to the Nonlinear information bottleneck theory, during the training process the mutual information about the input and the output is divided in a way that resemles a form of an encoder and a decoder.
+We focus on Deep Learning models, with different architecture, in order to achieve the following:
+- To visualize Deep learning model's hidden layers training using mutual information
+- To store and analyze the results of different training executions
+- To measure and compare the differences in the variance/Std Deviation of the trainng data, to the achieved measure-scores
 
-This work is made in order to visualize this concept, and enable us to learn and deepen our knowledge regarding these models.
 
+Since 'Deep Learning' is actually a learnable mapping function between input and ouput, this project visualizes the training process, where the model slowly finds the correct mapping parameters, until reaching the maximal bound.
+Unlike other visualizations, where the layers where visualized directly or using dimension reduction techniques (http://colah.github.io/posts/2014-10-Visualizing-MNIST/), here we're interested on the general information that the nodes contain, regarding both the inputs and the outputs.
 
-While running this model on your machine, the data will be saved on the servers, and compared to other previous runs.
-This way we can visualize for you not just one run, but statistics about all the possible runs similar models.
+According to the information bottleneck theory (Tishbey, Schwartz-Ziv.), during the training process the mutual information about the input and the output is divided between the layer in a way that resemles a form of an encoder and a decoder, until the data compress at a specific point.
 
 Lastly, it is important to let the model run long time, on many epochs, in order to test the hypothesis that the model can and will reach the upper information bottleneck theory bound.
 
+Related research:
+https://arxiv.org/pdf/1801.09354.pdf
+https://openreview.net/pdf?id=ry_WPG-A-
 
+
+https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff
 https://www.quantamagazine.org/new-theory-cracks-open-the-black-box-of-deep-learning-20170921/
+
+
+
+
+
 
 # Polymer App Toolbox - Starter Kit
 
