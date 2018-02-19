@@ -1,18 +1,22 @@
 
-# Deep Learning/Information Theory visualization using Web Components
+# Deep Learning / Information Theory visualization (using Web Components)
 
-- How much data is 'enough' for a Machine Learning Model (For example, Deep Learning) in order to achieve good generalized resulsts - good percision/F1-Statistic score?
-- How to overcome the bias/variance problem (overfitting)?
+## Objectives
+- To find out how much data is 'enough' for a Machine Learning Model (For example, Deep Learning) in order to achieve good generalized resulsts - good percision/F1-Statistic score?
+- Which characteristics are relevant for the input data (i.e. Variance) in order to achieve better scores?
+- Does running a model through multiple epochs really compress the model and overcome the bias/variance problem (prevents overfitting)?
 
-This work is based on previous work and theories by Prof. Geoff I Webb (Monash University) and Prof. Naftali Tishby (Hebrew University).
+### Related work
+This work is heavily based on the work and theories of [Prof. Geoff I Webb (Monash University)](http://i.giwebb.com/research/bias-and-variance/) and [Prof. Naftali Tishby (Hebrew University)](http://naftali-tishby.strikingly.com/).
 
-We focus on Deep Learning models, with different architecture, in order to achieve the following:
-- To visualize Deep learning model's hidden layers training using mutual information
+We focus on Deep Learning models, and testing different network architectures, in order to achieve the following:
+- To provide an interactive visualization of Deep learning network's hidden layers training phase using mutual information
 - To store and analyze the results of different training executions
-- To measure and compare the differences in the variance/Std Deviation of the trainng data, to the achieved measure-scores
+- To measure and analyze the impact of variance/Std Deviation differences of the trainng data, on the achieved measure-scores
 
 
-Since 'Deep Learning' is actually a learnable mapping function between input and ouput, this project visualizes the training process, where the model slowly finds the correct mapping parameters, until reaching the maximal bound.
+### Background
+Since 'Deep Learning' is practically a learnable mapping function between input and ouput, this project visualizes the training process, where the model slowly finds the correct mapping parameters, until reaching the maximal bound.
 Unlike other visualizations, where the layers where visualized directly or using dimension reduction techniques (http://colah.github.io/posts/2014-10-Visualizing-MNIST/), here we're interested on the general information that the nodes contain, regarding both the inputs and the outputs.
 
 According to the information bottleneck theory (Tishbey, Schwartz-Ziv.), during the training process the mutual information about the input and the output is divided between the layer in a way that resemles a form of an encoder and a decoder, until the data compress at a specific point.
@@ -20,19 +24,17 @@ According to the information bottleneck theory (Tishbey, Schwartz-Ziv.), during 
 Lastly, it is important to let the model run long time, on many epochs, in order to test the hypothesis that the model can and will reach the upper information bottleneck theory bound.
 
 Related research:
-https://arxiv.org/pdf/1801.09354.pdf
-https://openreview.net/pdf?id=ry_WPG-A-
-
-
-https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff
-https://www.quantamagazine.org/new-theory-cracks-open-the-black-box-of-deep-learning-20170921/
-
+* [On the Inter-relationships among Drift rate,
+Forgetting rate, Bias/variance profile and Error](https://arxiv.org/pdf/1801.09354.pdf)
+* [On the Information Bottleneck
+Theory of Deep Learning](https://openreview.net/pdf?id=ry_WPG-A-)
+* [New Theory Cracks Open the Black Box of Deep Learning](https://www.quantamagazine.org/new-theory-cracks-open-the-black-box-of-deep-learning-20170921/)
 
 
 
 
 
-# Polymer App Toolbox - Starter Kit
+# Polymer App Toolbox
 
 [![Build Status](https://travis-ci.org/PolymerElements/polymer-starter-kit.svg?branch=master)](https://travis-ci.org/PolymerElements/polymer-starter-kit)
 
