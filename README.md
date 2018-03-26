@@ -1,23 +1,27 @@
 
-# Deep Learning / Information Theory visualization (using Web Components)
+# Investigating Deep Learning models training using Information Theory visualization (Web Components version)
 
-## Objectives
-- To find out how much data is 'enough' for a Machine Learning Model (For example, Deep Learning) in order to achieve good generalized resulsts - good percision/F1-Statistic score?
+This research project aim is to investigate and learn ways to improve the general accuracy of deep learning models on an unseen data.
+
+### Motivation
+while using percision/F1-Statistic score as an objective metric, mutual information of the hidden layer is being examined during the training processs. Preplexity should b
+
+- To find out how much data is 'enough' for a Machine Learning Model (For example, Deep Learning) in order to achieve good generalized resulsts - 
 - Which characteristics are relevant for the input data (i.e. Variance) in order to achieve better scores?
 - Does running a model through multiple epochs really compress the model and overcome the bias/variance problem (prevents overfitting)?
 
 ### Related work
 This work is heavily based on the work and theories of [Prof. Geoff I Webb (Monash University)](http://i.giwebb.com/research/bias-and-variance/) and [Prof. Naftali Tishby (Hebrew University)](http://naftali-tishby.strikingly.com/).
 
-We focus on Deep Learning models, and testing different network architectures, in order to achieve the following:
-- To provide an interactive visualization of Deep learning network's hidden layers training phase using mutual information
-- To store and analyze the results of different training executions
-- To measure and analyze the impact of variance/Std Deviation differences of the trainng data, on the achieved measure-scores
+We focus on Deep Learning models, using different network architectures, in order to achieve the following:
+- to provide an interactive visualization of Deep learning network's hidden layers training phase using mutual information
+- Storing data of different training executions results in order to be analyzed
+- To measure and analyze the impact of variance/Std Deviation differences of the training data, on the hold-out sets accuarcy scores
 
 
 ### Background
-Since 'Deep Learning' is practically a learnable mapping function between input and ouput, this project visualizes the training process, where the model slowly finds the correct mapping parameters, until reaching the maximal bound.
-Unlike other visualizations, where the layers where visualized directly or using dimension reduction techniques (http://colah.github.io/posts/2014-10-Visualizing-MNIST/), here we're interested on the general information that the nodes contain, regarding both the inputs and the outputs.
+Since 'Deep Learning' is practically a learnable mapping function between input and ouput, this project visualizes the training process, where the model slowly finds the correct mapping parameters, using stochastic gradient descent based algorithm, until reaching the maximal bound.
+Unlike other visualizations, where the layers are visualized directly or using dimension reduction techniques (http://colah.github.io/posts/2014-10-Visualizing-MNIST/), here we're interested in the general information that the hidden layers' nodes contain, regarding both the inputs and the outputs.
 
 According to the information bottleneck theory (Tishbey, Schwartz-Ziv.), during the training process the mutual information about the input and the output is divided between the layer in a way that resemles a form of an encoder and a decoder, until the data compress at a specific point.
 
@@ -31,42 +35,11 @@ Theory of Deep Learning](https://openreview.net/pdf?id=ry_WPG-A-)
 * [New Theory Cracks Open the Black Box of Deep Learning](https://www.quantamagazine.org/new-theory-cracks-open-the-black-box-of-deep-learning-20170921/)
 
 
+## methods
 
 
 
-# Polymer App Toolbox
 
-[![Build Status](https://travis-ci.org/PolymerElements/polymer-starter-kit.svg?branch=master)](https://travis-ci.org/PolymerElements/polymer-starter-kit)
-
-This template is a starting point for building apps using a drawer-based
-layout. The layout is provided by `app-layout` elements.
-
-This template, along with the `polymer-cli` toolchain, also demonstrates use
-of the "PRPL pattern" This pattern allows fast first delivery and interaction with
-the content at the initial route requested by the user, along with fast subsequent
-navigation by pre-caching the remaining components required by the app and
-progressively loading them on-demand as the user navigates through the app.
-
-The PRPL pattern, in a nutshell:
-
-* **Push** components required for the initial route
-* **Render** initial route ASAP
-* **Pre-cache** components for remaining routes
-* **Lazy-load** and progressively upgrade next routes on-demand
-
-### Migrating from Polymer Starter Kit v1?
-
-[Check out our blog post that covers what's changed in PSK2 and how to migrate!](https://www.polymer-project.org/1.0/blog/2016-08-18-polymer-starter-kit-or-polymer-cli.html)
-
-### Quickstart
-
-We've recorded a Polycast to get you up and running with PSK2 fast!
-
-<p align="center">
-  <a href="https://www.youtube.com/watch?v=HgJ0XCyBwzY&list=PLNYkxOF6rcIDdS7HWIC_BYRunV6MHs5xo&index=10">
-    <img src="https://img.youtube.com/vi/HgJ0XCyBwzY/0.jpg" alt="Polymer Starter Kit 2 video">
-  </a>
-</p>
 
 ### Setup
 

@@ -4,7 +4,10 @@
   "devDependencies": {
     "eslint": "^3.19.0",
     "eslint-config-google": "^0.7.0",
-    "eslint-plugin-html": "^2.0.0"
+    "eslint-plugin-html": "^2.0.0",
+    "tsify": "~3.0.3",
+    "tslint": "~5.8.0",
+    "typescript": "2.7.2"
   },
   "repository": {
     "type": "git",
@@ -13,10 +16,13 @@
   "scripts": {
     "lint": "npm run lint:javascript && polymer lint",
     "lint:javascript": "eslint . --ext js,html --ignore-path .gitignore",
+    "lint:typescript": "tslint -p . -t verbose",
     "test": "polymer test",
-    "test:integration": "polymer build # test that psk builds without error with the CLI"
+    "test:integration": "polymer build # test that psk builds without error with the CLI",
+    "precommit": "check-clang-format"
   },
   "dependencies": {
-    "deeplearn": "^0.4.2"
+    "deeplearn": "^0.4.2",
+    "polymer": "^0.5.0"
   }
 }
